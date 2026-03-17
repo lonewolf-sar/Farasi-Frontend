@@ -52,11 +52,11 @@ const AddProducts = () => {
           <p className='text-success'>{success}</p>
           <p className='text-danger'>{error}</p>
 
-          <input type="text" placeholder='Enter Product Name'className='form-control'required value={product_name}onChange={(e)=>setProduct_name(e.target.value)}/>
+          <input type="text" placeholder='Enter Product Name'className='form-control'required value={product_name}onChange={(e)=>setProduct_name(e.target.value)}/> <br /> <br />
   
 
-          <input type="text" placeholder='Describe your Product'className='form-control'require value={product_description} onChange={(e)=>setProduct_description(e.target.value)}/>
-          <input type="number" placeholder='Enter Product Cost' className='form-control'required value={product_cost} onChange={(e)=>setProduct_cost(e.target.value)}/>
+          <input type="text" placeholder='Describe your Product'className='form-control'require value={product_description} onChange={(e)=>setProduct_description(e.target.value)}/> <br /> <br />
+          <input type="number" placeholder='Enter Product Cost' className='form-control'required value={product_cost} onChange={(e)=>setProduct_cost(e.target.value)}/> <br /> <br />
 
           
 

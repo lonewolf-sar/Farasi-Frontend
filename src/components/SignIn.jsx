@@ -69,10 +69,10 @@ const SignIn = () => {
          <p className='text-danger'>{error}</p>
 
          <input type="text"placeholder='Email'className='form-control' required value={email} onChange={(e)=>setEmail (e.target.value)}/>
-         {email}
+         {email} <br /> <br />
 
          <input type="text" placeholder='Password' className='form-control'required value={password} onChange={(e)=>setPassword (e.target.value)}/>
-         {password}
+         {password} <br /> <br />
 
          <input type="submit"value='SignIn'className='w-100 form-control text-white bg-success'required/>
          
