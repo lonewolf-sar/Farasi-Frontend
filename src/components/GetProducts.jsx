@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState ,useEffect} from 'react'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
+
 
 const GetProducts = () => {
 
@@ -8,6 +10,8 @@ const GetProducts = () => {
   const[loading,setLoading]=useState("")
   const[error,setError]=useState("")
   const[products,setProducts]=useState([])
+  const navigate=useNavigate()
+
   const image_url="http://joshuakarbolo.alwaysdata.net/static/images/"
   // function to fetch data from api
   const fetchProducts=async()=>{
@@ -45,12 +49,12 @@ const GetProducts = () => {
        
         <div className='col-md-3 justify-content-center'>
           <div className='card shadow mt-5'>
-            <img src={image_url+product.product_photo} alt="cake" className='product_img mt-3' />
+            <img src={image_url+product.product_photo} alt= "cake" className='product_img mt-3' />
             <div className='card-body'>
               <h5 className='text-success'>{product.product_name}</h5>
               <p className='text-secondary'>{product.product_description}</p>
               <p className='text-info'>{product.product_cost}</p>
-              <input type="button" className='btn btn-secondary w-100' value="Make payments"/>
+              <input type="button" className='btn btn-secondary w-100' value="Purchase Now" onClick={()=>navigate("/mpesa",{state:{product}})}/>
 
             </div>
 
