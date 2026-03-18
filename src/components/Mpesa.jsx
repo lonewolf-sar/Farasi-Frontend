@@ -10,6 +10,8 @@ const Mpesa = () => {
   const[amount,setAmount]=useState("")
   const{product}=useLocation().state || {}
 
+  const image_url="http://joshuakarbolo.alwaysdata.net/static/images/"
+
   // function to submit our data to api
   const submit= async(e)=>{
     e.preventDefault()
@@ -33,6 +35,9 @@ const Mpesa = () => {
   return (
     <div className='row justify-content-center'>
         <h1>Mpesa payments-Lipa na Mpesa</h1>
+        <img src={image_url+product.product_photo} alt= "cake" className='product_img mt-3' />
+
+
         <p className='text-success'>{product.product_name}</p>
         <p className='text-secondary'>{product.product_description}</p>
         <p className='text-info'>{product.product_cost}</p>
